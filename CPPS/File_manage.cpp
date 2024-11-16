@@ -19,7 +19,7 @@ list<Obras> ReadInfo()
 
     if (!infile)
     { 
-        cerr << "ERROR IN FILE: READ INFO" << endl; // codigo de erro
+        cerr << "ERROR IN FILE" << endl; // codigo de erro
     }
 
     while(infile >> titulo >> autor >> subGenero >> anoPublicacao >> midia){
