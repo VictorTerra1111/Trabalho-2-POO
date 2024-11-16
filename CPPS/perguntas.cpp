@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <list>
-#include "Obras.hpp"
-#include "perguntas.hpp"
+#include "../HPPS/Obras.hpp"
+#include "../HPPS/perguntas.hpp"
 
 using namespace std;
 

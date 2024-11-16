@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "Obras.hpp"
+#include "../HPPS/Obras.hpp"
 
 using namespace std;
 // implementacao dos metodos e do construtor da classe Obra

@@ -1,9 +1,9 @@
 #include <iostream>
 #include <list>
 #include <string>
-#include "Obras.hpp"
-#include "File_manage.hpp"
-#include "perguntas.hpp"
+#include "../HPPS/Obras.hpp"
+#include "../HPPS/File_manage.hpp"
+#include "../HPPS/perguntas.hpp"
 
 using namespace std;
 
