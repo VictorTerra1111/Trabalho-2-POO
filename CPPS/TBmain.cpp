@@ -11,7 +11,6 @@ int main()
 {
     bool runner = true;
     int numPergunta;
-    int outras_respostas = 0;
 
     list<Obras> lista = ReadInfo(); // le as informacoes do arquivo e as coloca na lista
 
