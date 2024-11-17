@@ -1,19 +1,16 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -IHPPS
-SRCDIR = CPPS
-INCDIR = HPPS
+
+CPP = CPPS
+HPP = HPPS
 TARGET = a
 
-SRCS = $(wildcard $(SRCDIR)/*.cpp)
-OBJS = $(SRCS:.cpp=.o)
+SRCS = $(wildcard $(CPP)/*.cpp)
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
-
-%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+$(TARGET):
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
 
 clean:
-	rm -f *.o $(TARGET)
+	rm -f $(TARGET)
