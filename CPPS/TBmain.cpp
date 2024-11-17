@@ -37,7 +37,7 @@ int main()
 
             break;
         case 4:
-                cout << " caso 4" << endl;
+                cout << "As obras que não são nem filme nem livro são" << endl << nemFilmesNemLivros(lista) <<endl;
 
             break;
         case 5:
