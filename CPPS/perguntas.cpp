@@ -37,3 +37,31 @@ string livroOuFilme(list<Obras> lista)
     else
         return "filmes";
 }
+string Subgenero(list<Obras> lista)
+{
+    list<Obras>::iterator it = lista.begin(); // iterador que aponta para o inicio da lista
+    string subgeneroMaisFrequente;
+    int maxFreq = 0;
+    list<string> subgeneros;
+
+    while (it != lista.end()){
+        subgeneros.push_back(it->getsubGenero());
+        ++it;
+    }
+
+        // frequencia de cada genero
+        for (list<string>::iterator subIt = subgeneros.begin(); subIt != subgeneros.end(); ++subIt)
+        {
+        int freq = count(subgeneros.begin(), subgeneros.end(), *subIt);
+        if (freq > maxFreq){
+            maxFreq = freq;
+            subgeneroMaisFrequente = *subIt;
+        }
+    }
+
+    if (!subgeneroMaisFrequente.empty()){
+        return subgeneroMaisFrequente;
+    }
+
+    return "Nenhum subgênero encontrado."; // erro
+}

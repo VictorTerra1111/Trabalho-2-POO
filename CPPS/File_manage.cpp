@@ -15,7 +15,7 @@ list<Obras> ReadInfo()
     list<Obras> lista; // lista para retornar os objetos lidos
 
     ifstream infile; 
-    infile.open("../TXTS/Data_bank.txt"); // abre o arquivo data_bank.txt 
+    infile.open("TXTS/Data_bank.txt"); // abre o arquivo data_bank.txt 
 
     if (!infile)
     { 
