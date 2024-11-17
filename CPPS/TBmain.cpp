@@ -18,7 +18,7 @@ int main()
     {
         cout << "1) Qual a obra mais antiga da coleção?" << endl;
         cout << "2) Há mais livros ou filmes nesta coleção?" << endl;
-        cout << "3) Quais os livros da coleção e qual o sub gênero que mais se repete?" << endl;
+        cout << "3) Qual o sub gênero que mais se repete?" << endl;
         cout << "4) Quais obras não são filmes e nem livros? O que elas são?" << endl;
         cout << "5) Qual a obra mais nova da coleção? A que sub gênero ela pertence?" << endl;
         cout << "6) Sair" << endl << endl;
@@ -33,7 +33,7 @@ int main()
                 cout << "Há mais " << livroOuFilme(lista) << " nesta lista." << endl;
             break;
         case 3:
-                cout << " caso 3" << endl;
+                cout << " " << Subgenero(lista) << endl;
 
             break;
         case 4:
