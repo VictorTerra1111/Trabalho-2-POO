@@ -65,3 +65,16 @@ string Subgenero(list<Obras> lista)
 
     return "Nenhum subgênero encontrado."; // erro
 }
+string nemFilmesNemLivros(list<Obras> lista){
+    string res = "";
+    
+    for (list<Obras>::iterator it = lista.begin(); it != lista.end(); ++it){
+        if (it->getAutor() != "Filme" && it->getAutor() != "Livro"){
+            res += "Obra: " + it->getTitulo() + " Tipo: " + it->getAutor() + "\n";
+        }
+    }
+    if (res.empty()) {
+        return "Nenhuma obra que nao seja filme nem livro."; // erro
+    }
+    return res;
+}
