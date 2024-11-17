@@ -1,12 +1,19 @@
-#PRECISA SER MODIFICADO 
-
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -IHPPS
+SRCDIR = CPPS
+INCDIR = HPPS
+TARGET = a
 
-all: programa
+SRCS = $(wildcard $(SRCDIR)/*.cpp)
+OBJS = $(SRCS:.cpp=.o)
 
-programa: TBmain.cpp File_manage.cpp Obras.cpp perguntas.cpp 
-	$(CXX) $(CXXFLAGS) -o  TBmain.cpp File_manage.cpp Obras.cpp perguntas.cpp 
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o a
+	rm -f *.o $(TARGET)
