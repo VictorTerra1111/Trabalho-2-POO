@@ -7,5 +7,6 @@
 
 int acharMaisAntigo(list<Obras> lista);
 string livroOuFilme(list<Obras> lista);
+string Subgenero(list<Obras> lista);
 
 #endif
