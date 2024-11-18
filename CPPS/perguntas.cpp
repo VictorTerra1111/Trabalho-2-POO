@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <algorithm>
 #include "../HPPS/Obras.hpp"
 #include "../HPPS/perguntas.hpp"
 
