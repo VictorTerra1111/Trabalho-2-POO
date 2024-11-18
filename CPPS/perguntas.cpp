@@ -45,50 +45,78 @@ string Subgenero(list<Obras> lista)
     int maxFreq = 0;
     list<string> subgeneros;
 
-    while (it != lista.end()){
+    while (it != lista.end())
+    {
         subgeneros.push_back(it->getsubGenero());
         ++it;
     }
 
-        // frequencia de cada genero
-        for (list<string>::iterator subIt = subgeneros.begin(); subIt != subgeneros.end(); ++subIt)
-        {
+    // frequencia de cada genero
+    for (list<string>::iterator subIt = subgeneros.begin(); subIt != subgeneros.end(); ++subIt)
+    {
         int freq = count(subgeneros.begin(), subgeneros.end(), *subIt);
-        if (freq > maxFreq){
+        if (freq > maxFreq)
+        {
             maxFreq = freq;
             subgeneroMaisFrequente = *subIt;
         }
     }
 
-    if (!subgeneroMaisFrequente.empty()){
+    if (!subgeneroMaisFrequente.empty())
+    {
         return subgeneroMaisFrequente;
     }
 
     return "Nenhum subgênero encontrado."; // erro
 }
-string nemFilmesNemLivros(list<Obras> lista){
+
+string nemFilmesNemLivros(list<Obras> lista)
+{
     string res = "";
-    
-    for (list<Obras>::iterator it = lista.begin(); it != lista.end(); ++it){
-        if (it->getAutor() != "Filme" && it->getAutor() != "Livro"){
+
+    for (list<Obras>::iterator it = lista.begin(); it != lista.end(); ++it)
+    {
+        if (it->getAutor() != "Filme" && it->getAutor() != "Livro")
+        {
             res += "Obra: " + it->getTitulo() + " Tipo: " + it->getAutor() + "\n";
         }
     }
-    if (res.empty()) {
+    if (res.empty())
+    {
         return "Nenhuma obra que nao seja filme nem livro."; // erro
     }
     return res;
 }
-string acharMaisNovo(list<Obras> lista){
+string acharMaisNovo(list<Obras> lista)
+{
     int ano = lista.begin()->getAnoPublicacao();
     string titulo = lista.begin()->getTitulo();
     string subG = lista.begin()->getsubGenero();
-    for(list<Obras>::iterator it = lista.begin();it!= lista.end();++it){
-         if (ano < it->getAnoPublicacao()){
+    for (list<Obras>::iterator it = lista.begin(); it != lista.end(); ++it)
+    {
+        if (ano < it->getAnoPublicacao())
+        {
             ano = it->getAnoPublicacao();
             titulo = it->getTitulo();
             subG = it->getsubGenero();
         }
     }
     return titulo + " do subgenero " + subG;
+}
+
+void tabelaDados(list<Obras> lista)
+{
+    list<Obras>::iterator it = lista.begin(); // iterador que aponta para o inicio da lista
+    cout << "TABELA DE OBRAS" << endl
+         << endl;
+
+    while (it != lista.end())
+    {
+        cout << "Titulo: " << it->getTitulo() << endl;
+        cout << "Autor: " << it->getAutor() << endl;
+        cout << "Tipo de midia: " << it->getMidia() << endl;
+        cout << "Subgênero: " << it->getsubGenero() << endl;
+        cout << "Data de lançamento: " << it->getAnoPublicacao() << endl << endl;
+        ++it;
+    }
 }

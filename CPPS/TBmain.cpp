@@ -28,7 +28,8 @@ int main()
                 cout << "3) Qual o sub gênero que mais se repete?" << endl;
                 cout << "4) Quais obras não são filmes e nem livros? O que elas são?" << endl;
                 cout << "5) Qual a obra mais nova da coleção? A que sub gênero ela pertence?" << endl;
-                cout << "6) Sair" << endl
+                cout << "6) Tabela de todas as obras da coleção." << endl;
+                cout << "7) Sair" << endl
                      << endl;
                 cout << "Digite aqui: ";
                 cin >> numPergunta;
@@ -66,12 +67,14 @@ int main()
                     cout << "-----------------------" << endl;
                     break;
                 case 6:
+                    tabelaDados(lista);
+                    break;
+                case 7:
                     cout << "-----------------------" << endl;
                     cout << "|  saindo  |" << endl;
                     cout << "-----------------------" << endl;
                     runner = false;
                     break;
-
                 default:
                     cout << "-----------------------" << endl;
                     cout << "|  esta não é uma opção válida  |" << endl;
