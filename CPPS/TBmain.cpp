@@ -27,30 +27,41 @@ int main()
         switch (numPergunta)
         {
         case 1:
-                cout << "A obra mais antiga desta coleção é de " << acharMaisAntigo(lista) << endl;
+                cout<<"-----------------------"<<endl;
+                cout << "|  A obra mais antiga desta coleção é de " << acharMaisAntigo(lista) <<"  |"<< endl;
+                cout<<"-----------------------"<<endl;
             break;
         case 2:
-                cout << "Há mais " << livroOuFilme(lista) << " nesta lista." << endl;
+                cout<<"-----------------------"<<endl;
+                cout << "|  Há mais " << livroOuFilme(lista) << " nesta lista   |" << endl;
+                cout<<"-----------------------"<<endl;
             break;
         case 3:
-                cout << " " << Subgenero(lista) << endl;
-
+                cout<<"-----------------------"<<endl;
+                cout << "|  " << Subgenero(lista) << "  |"<<endl;
+                cout<<"-----------------------"<<endl;
             break;
         case 4:
-                cout << "As obras que não são nem filme nem livro são" << endl << nemFilmesNemLivros(lista) <<endl;
-
+                cout<<"-----------------------"<<endl;
+                cout << "As obras que não são nem filme nem livro são" << endl << nemFilmesNemLivros(lista);
+                cout<<"-----------------------"<<endl;
             break;
         case 5:
-                cout << " caso 5" << endl;
-
+                cout<<"-----------------------"<<endl;
+                cout << "|  " << acharMaisNovo(lista) << "  |"<<endl;
+                cout<<"-----------------------"<<endl;
             break;
         case 6:
-                cout << " saindo" << endl;
+                cout<<"-----------------------"<<endl;
+                cout << "|  saindo  |" << endl;
+                cout<<"-----------------------"<<endl;
             runner = false;
             break;
 
         default:
-            cout << "esta não é uma opção válida" << endl;
+            cout<<"-----------------------"<<endl;
+            cout << "|  esta não é uma opção válida  |" << endl;
+            cout<<"-----------------------"<<endl;
             break;
         }
     }
