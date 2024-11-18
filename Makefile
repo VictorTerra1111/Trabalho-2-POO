@@ -3,7 +3,7 @@ CXXFLAGS = -std=c++11 -Wall -IHPPS
 
 CPP = CPPS
 HPP = HPPS
-TARGET = a
+TARGET = programa
 
 SRCS = $(wildcard $(CPP)/*.cpp)
 
