@@ -5,15 +5,17 @@
 
 using namespace std;
 // classe Obras sem implementacao
-class Obras {
+class Obras
+{
 private:
     string titulo;
     string autor;
     string midia;
     string subGenero;
     int anoPublicacao;
+
 public:
-    Obras(string vtitulo = "null", string vautor = "null", string vsubGenero = "null", string vmidia = "null", int vanoPublicacao = 0);
+    Obras(string vtitulo = "null", string vmidia = "null", string vautor = "null", int vanoPublicacao = 0, string vsubGenero = "null");
 
     string getTitulo() const;
     string getAutor() const;

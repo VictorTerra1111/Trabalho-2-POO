@@ -76,9 +76,9 @@ string nemFilmesNemLivros(list<Obras> lista)
 
     for (list<Obras>::iterator it = lista.begin(); it != lista.end(); ++it)
     {
-        if (it->getAutor() != "Filme" && it->getAutor() != "Livro")
+        if (it->getMidia() != "Filme" && it->getMidia() != "Livro")
         {
-            res += "Obra: " + it->getTitulo() + " Tipo: " + it->getAutor() + "\n";
+            res += "Obra: " + it->getTitulo() + " Tipo: " + it->getMidia() + "\n";
         }
     }
     if (res.empty())
@@ -116,7 +116,8 @@ void tabelaDados(list<Obras> lista)
         cout << "Autor: " << it->getAutor() << endl;
         cout << "Tipo de midia: " << it->getMidia() << endl;
         cout << "Subgênero: " << it->getsubGenero() << endl;
-        cout << "Data de lançamento: " << it->getAnoPublicacao() << endl << endl;
+        cout << "Data de lançamento: " << it->getAnoPublicacao() << endl
+             << endl;
         ++it;
     }
 }

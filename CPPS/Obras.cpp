@@ -5,31 +5,36 @@
 
 using namespace std;
 // implementacao dos metodos e do construtor da classe Obra
-
-Obras::Obras(string vtitulo, string vautor, string vsubGenero, string vmidia, int vanoPublicacao){
+Obras::Obras(string vtitulo, string vmidia, string vautor, int vanoPublicacao, string vsubGenero)
+{
     titulo = vtitulo;
     autor = vautor;
-    midia = vsubGenero;
-    subGenero = vmidia;
+    midia = vmidia;
+    subGenero = vsubGenero;
     anoPublicacao = vanoPublicacao;
 }
 
-string Obras::getTitulo() const {
+string Obras::getTitulo() const
+{
     return titulo;
 }
 
-string Obras::getAutor() const {
+string Obras::getAutor() const
+{
     return autor;
 }
 
-string Obras::getsubGenero() const {
+string Obras::getsubGenero() const
+{
     return subGenero;
 }
 
-int Obras::getAnoPublicacao() const {
+int Obras::getAnoPublicacao() const
+{
     return anoPublicacao;
 }
 
-string Obras::getMidia() const {
+string Obras::getMidia() const
+{
     return midia;
 }

@@ -14,18 +14,20 @@ list<Obras> ReadInfo()
     int anoPublicacao;
     list<Obras> lista; // lista para retornar os objetos lidos
 
-    ifstream infile; 
-    infile.open("TXTS/Data_bank.txt"); // abre o arquivo data_bank.txt 
+    ifstream infile;
+    infile.open("TXTS/Data_bank.txt"); // abre o arquivo data_bank.txt
 
     if (!infile)
-    { 
+    {
         cerr << "ERROR IN FILE" << endl; // codigo de erro
     }
-
-    while(infile >> titulo >> autor >> subGenero >> anoPublicacao >> midia){
-        Obras piece(titulo, autor, subGenero, midia, anoPublicacao); 
+    // EXEMPLO DE LEITURA: Alien Filme Ridley_Scott 1979 Horror_Cósmico
+    while (infile >> titulo >> midia >> autor >> anoPublicacao >> subGenero)
+    {
+        Obras piece(titulo, midia, autor, anoPublicacao, subGenero);
         lista.push_back(piece);
     } // le todas as informacoes de cada objeto e adiciona a lista
+    
     infile.close(); // fecha o arquivo
 
     return lista; // retorna a lista
