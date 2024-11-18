@@ -78,3 +78,16 @@ string nemFilmesNemLivros(list<Obras> lista){
     }
     return res;
 }
+string acharMaisNovo(list<Obras> lista){
+    int ano = lista.begin()->getAnoPublicacao();
+    string titulo = lista.begin()->getTitulo();
+    string subG = lista.begin()->getsubGenero();
+    for(list<Obras>::iterator it = lista.begin();it!= lista.end();++it){
+         if (ano < it->getAnoPublicacao()){
+            ano = it->getAnoPublicacao();
+            titulo = it->getTitulo();
+            subG = it->getsubGenero();
+        }
+    }
+    return titulo + " do subgenero " + subG;
+}
