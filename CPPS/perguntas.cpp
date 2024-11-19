@@ -2,6 +2,7 @@
 #include <string>
 #include <list>
 #include <algorithm>
+#include <iomanip>
 #include "../HPPS/Obras.hpp"
 #include "../HPPS/perguntas.hpp"
 
@@ -107,17 +108,21 @@ string acharMaisNovo(list<Obras> lista)
 void tabelaDados(list<Obras> lista)
 {
     list<Obras>::iterator it = lista.begin(); // iterador que aponta para o inicio da lista
-    cout << "TABELA DE OBRAS" << endl
-         << endl;
+    cout
+        << "|" << left << setw(45) << setfill(' ') << "TITULO"
+        << "|" << left << setw(45) << setfill(' ') << "AUTOR"
+        << "|" << left << setw(20) << setfill(' ') << "MIDIA"
+        << "|" << left << setw(20) << setfill(' ') << "SUBGEN"
+        << "|" << left << setw(20) << setfill(' ') << "ANO" << endl;
 
     while (it != lista.end())
     {
-        cout << "Titulo: " << it->getTitulo() << endl;
-        cout << "Autor: " << it->getAutor() << endl;
-        cout << "Tipo de midia: " << it->getMidia() << endl;
-        cout << "Subgênero: " << it->getsubGenero() << endl;
-        cout << "Data de lançamento: " << it->getAnoPublicacao() << endl
-             << endl;
+        cout
+            << "|" << left << setw(45) << setfill(' ') << it->getTitulo()
+            << "|" << left << setw(45) << setfill(' ') << it->getAutor()
+            << "|" << left << setw(20) << setfill(' ') << it->getMidia()
+            << "|" << left << setw(20) << setfill(' ') << it->getsubGenero()
+            << "|" << left << setw(20) << setfill(' ') << it->getAnoPublicacao() << endl;
         ++it;
     }
 }
