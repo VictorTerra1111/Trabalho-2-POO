@@ -109,20 +109,23 @@ void tabelaDados(list<Obras> lista)
 {
     list<Obras>::iterator it = lista.begin(); // iterador que aponta para o inicio da lista
     cout
-        << "|" << left << setw(45) << setfill(' ') << "TITULO"
+        << " " << left << setw(150) << setfill('_') <<" "
+        <<endl<< "|" << left << setw(45) << setfill(' ') << "TITULO"
         << "|" << left << setw(45) << setfill(' ') << "AUTOR"
         << "|" << left << setw(20) << setfill(' ') << "MIDIA"
         << "|" << left << setw(20) << setfill(' ') << "SUBGEN"
-        << "|" << left << setw(20) << setfill(' ') << "ANO" << endl;
+        << "|" << left << setw(20) << setfill(' ') << "ANO"<<endl;
 
     while (it != lista.end())
     {
         cout
+            << "|" << left << setw(150) << setfill('_') <<" " << endl
             << "|" << left << setw(45) << setfill(' ') << it->getTitulo()
             << "|" << left << setw(45) << setfill(' ') << it->getAutor()
             << "|" << left << setw(20) << setfill(' ') << it->getMidia()
             << "|" << left << setw(20) << setfill(' ') << it->getsubGenero()
-            << "|" << left << setw(20) << setfill(' ') << it->getAnoPublicacao() << endl;
+            << "|" << left << setw(20) << setfill(' ') << it->getAnoPublicacao()<< endl;
         ++it;
     }
+    cout << "|" << left << setw(150) << setfill('_') <<" " << endl;
 }
