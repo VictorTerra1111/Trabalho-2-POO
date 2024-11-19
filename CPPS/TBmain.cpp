@@ -12,6 +12,9 @@ using namespace std;
     Titulo: Coleção de Obras de ficção Científica
     Autores: João Victor Terra & Raul Costa
     Disciplina: Programação Orientada a Objetos
+    PASSOS PARA EXECUTAR:
+    1) make
+    2) ./programa
 */
 
 int main()
