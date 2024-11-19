@@ -4,7 +4,9 @@
 #include <string>
 
 using namespace std;
+
 // classe Obras sem implementacao
+
 class Obras
 {
 private:

@@ -27,7 +27,7 @@ list<Obras> ReadInfo()
         Obras piece(titulo, midia, autor, anoPublicacao, subGenero);
         lista.push_back(piece);
     } // le todas as informacoes de cada objeto e adiciona a lista
-    
+
     infile.close(); // fecha o arquivo
 
     return lista; // retorna a lista
